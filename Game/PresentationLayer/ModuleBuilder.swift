@@ -26,9 +26,9 @@ extension ModuleBuilder: Builder {
     func buildStartViewController() -> StartViewController {
         let presenter = StartViewPresenter(moduleBuilder: self)
         let viewController = StartViewController()
+        viewController.factory = factory
         presenter.view = viewController
         viewController.presenter = presenter
-        viewController.factory = factory
         return viewController
     }
     
@@ -44,6 +44,7 @@ extension ModuleBuilder: Builder {
     func buildComputerViewController() -> ComputerViewController {
         let presenter = ComputerViewPresenter(moduleBuilder: self)
         let viewController = ComputerViewController()
+        viewController.factory = factory
         presenter.view = viewController
         viewController.presenter = presenter
         return viewController

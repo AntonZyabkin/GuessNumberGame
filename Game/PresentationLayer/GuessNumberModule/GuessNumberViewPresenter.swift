@@ -35,7 +35,6 @@ extension GuessNumberViewPresenter: GuessNumberViewPresenterProtocol {
             return
         }
         if number > 0 && number <= 100 {
-            print(number)
             moduleBuilder.game.guessNumber = number
             view?.button.alpha = 1
             view?.button.backgroundColor = .systemBlue

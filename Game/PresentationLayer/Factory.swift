@@ -11,6 +11,7 @@ import UIKit
 
 protocol FactoryProtocol {
     func createBlueButton(withTitle: String) -> UIButton
+    func createSquareButton(withTitle: String) -> UIButton
     func createTextField(withPlaceholder: String) -> UITextField
 }
 
@@ -23,11 +24,23 @@ final class Factory: FactoryProtocol {
         return button
     }
     
+    func createSquareButton(withTitle: String) -> UIButton {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        button.setTitle(withTitle, for: .normal)
+        button.backgroundColor = .white
+        button.setTitleColor(.systemGray, for: .normal)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.systemGray.cgColor
+        button.layer.cornerRadius = 15
+        return button
+    }
+    
     func createTextField(withPlaceholder: String) -> UITextField {
         let textfield = MainTextField(placeholderText: withPlaceholder)
         textfield.layer.cornerRadius = 15
         textfield.textAlignment = .center
-        textfield.layer.borderColor = UIColor.systemGray.cgColor
+        textfield.layer.borderWidth = 1
+        textfield.layer.borderColor = UIColor.systemGray4.cgColor
         return textfield
     }
     

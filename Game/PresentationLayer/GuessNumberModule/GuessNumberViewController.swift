@@ -57,7 +57,6 @@ class GuessNumberViewController: UIViewController {
     }
     
     @objc func buttonDidPress() {
-        print("success")
         presenter?.buttonDidPress()
     }
     
