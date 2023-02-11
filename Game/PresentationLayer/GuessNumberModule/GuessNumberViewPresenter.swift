@@ -10,7 +10,7 @@ import UIKit
 
 protocol GuessNumberViewPresenterProtocol {
     func editingChanged (text: String?) -> Void
-    func buttonDidPress()
+    func buttonDidPressed()
 }
 
 final class GuessNumberViewPresenter {
@@ -43,7 +43,7 @@ extension GuessNumberViewPresenter: GuessNumberViewPresenterProtocol {
             disableButton()
         }
     }
-    func buttonDidPress() {
+    func buttonDidPressed() {
         let computerViewController = moduleBuilder.buildComputerViewController()
         computerViewController.modalPresentationStyle = .fullScreen
         view?.navigationController?.pushViewController(computerViewController, animated: true)

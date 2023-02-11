@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ComputerViewPresenterProtocol {
-    func play()
+    func moveButtonDidPressed()
 }
 
 final class ComputerViewPresenter {
@@ -19,14 +19,21 @@ final class ComputerViewPresenter {
         self.moduleBuilder = moduleBuilder
     }
     
-
+    private func refreshButtons() {
+        view?.lessButton.isEnabled = false
+        view?.moreButton.isEnabled = false
+        view?.equelbutton.isEnabled = false
+        view?.lessButton.backgroundColor = .clear
+        view?.moreButton.backgroundColor = .clear
+        view?.equelbutton.backgroundColor = .clear
+    }
 }
 
 extension ComputerViewPresenter: ComputerViewPresenterProtocol {
-    func play() {
+    func moveButtonDidPressed() {
         refreshButtons()
         moduleBuilder.game.computerMove()
-        view?.guessLabel.text = "Attemp № \(moduleBuilder.game.AIAttempt) \nComputer is guessing\n\nYour number is: \(moduleBuilder.game.assumptionNumber)?"
+        view?.guessLabel.text = "Attempt № \(moduleBuilder.game.AIAttempt) \nComputer is guessing\n\nYour number is: \(moduleBuilder.game.assumptionNumber)?"
         switch moduleBuilder.game.status {
         case .equal:
             view?.equelbutton.backgroundColor = .blue
@@ -40,13 +47,5 @@ extension ComputerViewPresenter: ComputerViewPresenterProtocol {
         case .outOfRange:
             break
         }
-    }
-    private func refreshButtons() {
-        view?.lessButton.isEnabled = false
-        view?.moreButton.isEnabled = false
-        view?.equelbutton.isEnabled = false
-        view?.lessButton.backgroundColor = .clear
-        view?.moreButton.backgroundColor = .clear
-        view?.equelbutton.backgroundColor = .clear
     }
 }

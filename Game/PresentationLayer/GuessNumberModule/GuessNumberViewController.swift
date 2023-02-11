@@ -27,7 +27,7 @@ class GuessNumberViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
 
         view.backgroundColor = .white
-        button.addTarget(self, action: #selector(buttonDidPress), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonDidPressed), for: .touchUpInside)
         textField.addTarget(self, action: #selector(textFielEditingChanged), for: .editingChanged)
     }
     override func viewDidLayoutSubviews() {
@@ -56,8 +56,8 @@ class GuessNumberViewController: UIViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    @objc func buttonDidPress() {
-        presenter?.buttonDidPress()
+    @objc func buttonDidPressed() {
+        presenter?.buttonDidPressed()
     }
     
     @objc func textFielEditingChanged() {

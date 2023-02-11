@@ -25,7 +25,7 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        button.addTarget(self, action: #selector(buttonDidPress), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonDidPressed), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -33,8 +33,8 @@ class StartViewController: UIViewController {
         configViews()
     }
     
-    @objc func buttonDidPress() {
-        presenter?.buttonDidPress()
+    @objc func buttonDidPressed() {
+        presenter?.buttonDidPressed()
     }
     
     private func configViews() {

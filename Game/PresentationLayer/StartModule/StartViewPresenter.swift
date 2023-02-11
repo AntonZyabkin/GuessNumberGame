@@ -11,7 +11,7 @@ import UIKit
 
 protocol StartViewPresenterProtocol {
     func startGameButtonDidPressed() -> UIViewController
-    func buttonDidPress()
+    func buttonDidPressed()
 }
 final class StartViewPresenter {
     private let moduleBuilder: Builder
@@ -26,7 +26,7 @@ extension StartViewPresenter: StartViewPresenterProtocol {
     func startGameButtonDidPressed() -> UIViewController {
         return moduleBuilder.buildGuessNumberViewController()
     }
-    func buttonDidPress() {
+    func buttonDidPressed() {
         let guessViewController = moduleBuilder.buildGuessNumberViewController()
         guessViewController.modalPresentationStyle = .fullScreen
         view?.navigationController?.pushViewController(guessViewController, animated: true)

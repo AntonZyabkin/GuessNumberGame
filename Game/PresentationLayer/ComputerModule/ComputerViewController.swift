@@ -46,7 +46,7 @@ class ComputerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        presenter?.play()
+        presenter?.moveButtonDidPressed()
         view.backgroundColor = .white
     }
     
@@ -81,13 +81,13 @@ class ComputerViewController: UIViewController {
         myNumberLabel.translatesAutoresizingMaskIntoConstraints = false
         hStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        moreButton.addTarget(self, action: #selector(notEquelButtonDidPress), for: .touchUpInside)
-        lessButton.addTarget(self, action: #selector(notEquelButtonDidPress), for: .touchUpInside)
+        moreButton.addTarget(self, action: #selector(moveButtonDidPressed), for: .touchUpInside)
+        lessButton.addTarget(self, action: #selector(moveButtonDidPressed), for: .touchUpInside)
         equelbutton.addTarget(self, action: #selector(equelButtonDidPress), for: .touchUpInside)
     }
     
-    @objc func notEquelButtonDidPress() {
-        presenter?.play()
+    @objc func moveButtonDidPressed() {
+        presenter?.moveButtonDidPressed()
     }
     
     @objc func equelButtonDidPress() {
