@@ -46,7 +46,7 @@ extension GuessNumberViewPresenter: GuessNumberViewPresenterProtocol {
     func buttonDidPressed() {
         let computerViewController = moduleBuilder.buildComputerViewController()
         computerViewController.modalPresentationStyle = .fullScreen
-        view?.navigationController?.pushViewController(computerViewController, animated: true)
+        view?.navigationController?.pushViewController(computerViewController, animated: false)
     }
 
 }

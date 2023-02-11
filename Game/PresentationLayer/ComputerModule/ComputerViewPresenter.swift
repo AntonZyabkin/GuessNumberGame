@@ -9,6 +9,7 @@ import Foundation
 
 protocol ComputerViewPresenterProtocol {
     func moveButtonDidPressed()
+    func equelButtonDidPressed()
 }
 
 final class ComputerViewPresenter {
@@ -33,7 +34,7 @@ extension ComputerViewPresenter: ComputerViewPresenterProtocol {
     func moveButtonDidPressed() {
         refreshButtons()
         moduleBuilder.game.computerMove()
-        view?.guessLabel.text = "Attempt № \(moduleBuilder.game.AIAttempt) \nComputer is guessing\n\nYour number is: \(moduleBuilder.game.assumptionNumber)?"
+        view?.guessLabel.text = "Attempt № \(moduleBuilder.game.aiAttempts) \nComputer is guessing\n\nYour number is: \(moduleBuilder.game.assumptionNumber)?"
         switch moduleBuilder.game.status {
         case .equal:
             view?.equelbutton.backgroundColor = .blue
@@ -44,8 +45,12 @@ extension ComputerViewPresenter: ComputerViewPresenterProtocol {
         case .more:
             view?.moreButton.backgroundColor = .blue
             view?.moreButton.isEnabled = true
-        case .outOfRange:
-            break
         }
+    }
+    
+    func equelButtonDidPressed() {
+        let playerViewController = moduleBuilder.buildPlayerViewController()
+        playerViewController.modalPresentationStyle = .fullScreen
+        view?.navigationController?.pushViewController(playerViewController, animated: false)
     }
 }

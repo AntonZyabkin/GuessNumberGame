@@ -36,7 +36,8 @@ final class Factory: FactoryProtocol {
     }
     
     func createTextField(withPlaceholder: String) -> UITextField {
-        let textfield = MainTextField(placeholderText: withPlaceholder)
+        let textfield = UITextField()
+        textfield.placeholder = withPlaceholder
         textfield.layer.cornerRadius = 15
         textfield.textAlignment = .center
         textfield.layer.borderWidth = 1

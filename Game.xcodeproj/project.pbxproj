@@ -15,12 +15,15 @@
 		E89AF3A1299777C800508DC2 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3A0299777C800508DC2 /* ModuleBuilder.swift */; };
 		E89AF3A729977CBC00508DC2 /* StartViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3A629977CBC00508DC2 /* StartViewPresenter.swift */; };
 		E89AF3A929977F1E00508DC2 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3A829977F1E00508DC2 /* Factory.swift */; };
-		E89AF3AB29977FF900508DC2 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3AA29977FF900508DC2 /* MainTextField.swift */; };
 		E89AF3B129978E1A00508DC2 /* GuessNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3B029978E1A00508DC2 /* GuessNumberViewController.swift */; };
 		E89AF3B429978E3000508DC2 /* GuessNumberViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3B329978E3000508DC2 /* GuessNumberViewPresenter.swift */; };
 		E89AF3B72997A8EF00508DC2 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3B62997A8EF00508DC2 /* GameController.swift */; };
 		E89AF3BA2997AB8C00508DC2 /* ComputerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3B92997AB8C00508DC2 /* ComputerViewController.swift */; };
 		E89AF3BC2997AB9C00508DC2 /* ComputerViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3BB2997AB9C00508DC2 /* ComputerViewPresenter.swift */; };
+		E89AF3BF2997D95900508DC2 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3BE2997D95900508DC2 /* PlayerViewController.swift */; };
+		E89AF3C12997D96700508DC2 /* PlayerViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3C02997D96700508DC2 /* PlayerViewPresenter.swift */; };
+		E89AF3C42997EC0200508DC2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3C32997EC0200508DC2 /* ResultViewController.swift */; };
+		E89AF3C62997EC1400508DC2 /* ResultViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3C52997EC1400508DC2 /* ResultViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +37,15 @@
 		E89AF3A0299777C800508DC2 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		E89AF3A629977CBC00508DC2 /* StartViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewPresenter.swift; sourceTree = "<group>"; };
 		E89AF3A829977F1E00508DC2 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
-		E89AF3AA29977FF900508DC2 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
 		E89AF3B029978E1A00508DC2 /* GuessNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessNumberViewController.swift; sourceTree = "<group>"; };
 		E89AF3B329978E3000508DC2 /* GuessNumberViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessNumberViewPresenter.swift; sourceTree = "<group>"; };
 		E89AF3B62997A8EF00508DC2 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		E89AF3B92997AB8C00508DC2 /* ComputerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerViewController.swift; sourceTree = "<group>"; };
 		E89AF3BB2997AB9C00508DC2 /* ComputerViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerViewPresenter.swift; sourceTree = "<group>"; };
+		E89AF3BE2997D95900508DC2 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		E89AF3C02997D96700508DC2 /* PlayerViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewPresenter.swift; sourceTree = "<group>"; };
+		E89AF3C32997EC0200508DC2 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		E89AF3C52997EC1400508DC2 /* ResultViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +102,11 @@
 			children = (
 				E89AF3A0299777C800508DC2 /* ModuleBuilder.swift */,
 				E89AF3A829977F1E00508DC2 /* Factory.swift */,
-				E89AF3AC29977FFF00508DC2 /* CustomViews */,
 				E89AF3A529977C8C00508DC2 /* StartModule */,
 				E89AF3AF29978DC200508DC2 /* GuessNumberModule */,
 				E89AF3B82997AB5200508DC2 /* ComputerModule */,
+				E89AF3BD2997D94400508DC2 /* PlayerModule */,
+				E89AF3C22997EBD100508DC2 /* ResultModule */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -111,14 +118,6 @@
 				E89AF3A629977CBC00508DC2 /* StartViewPresenter.swift */,
 			);
 			path = StartModule;
-			sourceTree = "<group>";
-		};
-		E89AF3AC29977FFF00508DC2 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-				E89AF3AA29977FF900508DC2 /* MainTextField.swift */,
-			);
-			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		E89AF3AF29978DC200508DC2 /* GuessNumberModule */ = {
@@ -145,6 +144,24 @@
 				E89AF3BB2997AB9C00508DC2 /* ComputerViewPresenter.swift */,
 			);
 			path = ComputerModule;
+			sourceTree = "<group>";
+		};
+		E89AF3BD2997D94400508DC2 /* PlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				E89AF3BE2997D95900508DC2 /* PlayerViewController.swift */,
+				E89AF3C02997D96700508DC2 /* PlayerViewPresenter.swift */,
+			);
+			path = PlayerModule;
+			sourceTree = "<group>";
+		};
+		E89AF3C22997EBD100508DC2 /* ResultModule */ = {
+			isa = PBXGroup;
+			children = (
+				E89AF3C32997EC0200508DC2 /* ResultViewController.swift */,
+				E89AF3C52997EC1400508DC2 /* ResultViewPresenter.swift */,
+			);
+			path = ResultModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,14 +238,17 @@
 				E89AF3A729977CBC00508DC2 /* StartViewPresenter.swift in Sources */,
 				E89AF3B72997A8EF00508DC2 /* GameController.swift in Sources */,
 				E89AF3B129978E1A00508DC2 /* GuessNumberViewController.swift in Sources */,
+				E89AF3C12997D96700508DC2 /* PlayerViewPresenter.swift in Sources */,
 				E89AF3B429978E3000508DC2 /* GuessNumberViewPresenter.swift in Sources */,
 				E89AF38F299774EB00508DC2 /* StartViewController.swift in Sources */,
 				E89AF3A929977F1E00508DC2 /* Factory.swift in Sources */,
+				E89AF3BF2997D95900508DC2 /* PlayerViewController.swift in Sources */,
+				E89AF3C42997EC0200508DC2 /* ResultViewController.swift in Sources */,
 				E89AF3BA2997AB8C00508DC2 /* ComputerViewController.swift in Sources */,
 				E89AF38B299774EB00508DC2 /* AppDelegate.swift in Sources */,
 				E89AF3A1299777C800508DC2 /* ModuleBuilder.swift in Sources */,
 				E89AF38D299774EB00508DC2 /* SceneDelegate.swift in Sources */,
-				E89AF3AB29977FF900508DC2 /* MainTextField.swift in Sources */,
+				E89AF3C62997EC1400508DC2 /* ResultViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

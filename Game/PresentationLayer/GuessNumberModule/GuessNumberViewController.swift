@@ -14,13 +14,13 @@ class GuessNumberViewController: UIViewController {
     var factory: FactoryProtocol!
     var presenter: GuessNumberViewPresenterProtocol?
 
-    internal lazy var button: UIButton = {
+    lazy var button: UIButton = {
         let button = factory.createBlueButton(withTitle: "Enter the number")
         button.alpha = 0.5
         button.isEnabled = false
         return button
     }()
-    private lazy var textField = factory.createTextField(withPlaceholder: "Guess a number from 1 to 100")
+    lazy var textField = factory.createTextField(withPlaceholder: "Guess a number from 1 to 100")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class GuessNumberViewController: UIViewController {
         configViews()
     }
     
-    private func configViews() {
+    func configViews() {
         
         view.addSubview(button)
         view.addSubview(textField)

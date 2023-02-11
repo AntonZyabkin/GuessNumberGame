@@ -26,6 +26,7 @@ class ComputerViewController: UIViewController {
     lazy var lessButton = factory.createSquareButton(withTitle: "<")
     lazy var equelbutton = factory.createSquareButton(withTitle: "=")
     lazy var moreButton = factory.createSquareButton(withTitle: ">")
+    
     private lazy var myNumberLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -91,7 +92,7 @@ class ComputerViewController: UIViewController {
     }
     
     @objc func equelButtonDidPress() {
-        print("GAME OVER")
+        presenter?.equelButtonDidPressed()
     }
 }
 

@@ -26,9 +26,15 @@ extension StartViewPresenter: StartViewPresenterProtocol {
     func startGameButtonDidPressed() -> UIViewController {
         return moduleBuilder.buildGuessNumberViewController()
     }
+//    func buttonDidPressed() {
+//        let guessViewController = moduleBuilder.buildGuessNumberViewController()
+//        guessViewController.modalPresentationStyle = .fullScreen
+//        view?.navigationController?.pushViewController(guessViewController, animated: true)
+//    }
     func buttonDidPressed() {
-        let guessViewController = moduleBuilder.buildGuessNumberViewController()
-        guessViewController.modalPresentationStyle = .fullScreen
-        view?.navigationController?.pushViewController(guessViewController, animated: true)
+        let playerViewController = moduleBuilder.buildPlayerViewController()
+        playerViewController.modalPresentationStyle = .fullScreen
+        view?.navigationController?.pushViewController(playerViewController, animated: false)
     }
+
 }

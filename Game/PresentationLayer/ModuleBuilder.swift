@@ -9,6 +9,8 @@ protocol Builder {
     func buildStartViewController() -> StartViewController
     func buildGuessNumberViewController() -> GuessNumberViewController
     func buildComputerViewController() -> ComputerViewController
+    func buildPlayerViewController() -> PlayerViewController
+    func buildResultViewController() -> ResultViewController
     var game: GameControllerProtocol { get set }
 }
 
@@ -47,6 +49,24 @@ extension ModuleBuilder: Builder {
         viewController.factory = factory
         presenter.view = viewController
         viewController.presenter = presenter
+        return viewController
+    }
+    func buildPlayerViewController() -> PlayerViewController {
+        let presenter = PlayerViewPrecenter(moduleBuilder: self)
+        let viewController = PlayerViewController()
+        viewController.factory = factory
+        presenter.view = viewController
+        presenter.startGame()
+        viewController.presenter = presenter
+        return viewController
+    }
+    func buildResultViewController() -> ResultViewController {
+        let presenter = PlayerViewPrecenter(moduleBuilder: self)
+        let viewController = ResultViewController()
+//        viewController.factory = factory
+//        presenter.view = viewController
+//        presenter.startGame()
+//        viewController.presenter = presenter
         return viewController
     }
 
