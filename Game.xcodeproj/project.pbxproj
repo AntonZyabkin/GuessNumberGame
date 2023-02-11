@@ -14,6 +14,8 @@
 		E89AF397299774ED00508DC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89AF395299774ED00508DC2 /* LaunchScreen.storyboard */; };
 		E89AF3A1299777C800508DC2 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3A0299777C800508DC2 /* ModuleBuilder.swift */; };
 		E89AF3A729977CBC00508DC2 /* StartViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3A629977CBC00508DC2 /* StartViewPresenter.swift */; };
+		E89AF3A929977F1E00508DC2 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3A829977F1E00508DC2 /* Factory.swift */; };
+		E89AF3AB29977FF900508DC2 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3AA29977FF900508DC2 /* MainTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E89AF398299774ED00508DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E89AF3A0299777C800508DC2 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		E89AF3A629977CBC00508DC2 /* StartViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewPresenter.swift; sourceTree = "<group>"; };
+		E89AF3A829977F1E00508DC2 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		E89AF3AA29977FF900508DC2 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +83,10 @@
 		E89AF3A429977B4F00508DC2 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E89AF3AC29977FFF00508DC2 /* CustomViews */,
 				E89AF3A529977C8C00508DC2 /* StartModule */,
 				E89AF3A0299777C800508DC2 /* ModuleBuilder.swift */,
+				E89AF3A829977F1E00508DC2 /* Factory.swift */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -92,6 +98,14 @@
 				E89AF3A629977CBC00508DC2 /* StartViewPresenter.swift */,
 			);
 			path = StartModule;
+			sourceTree = "<group>";
+		};
+		E89AF3AC29977FFF00508DC2 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				E89AF3AA29977FF900508DC2 /* MainTextField.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +180,11 @@
 			files = (
 				E89AF3A729977CBC00508DC2 /* StartViewPresenter.swift in Sources */,
 				E89AF38F299774EB00508DC2 /* StartViewController.swift in Sources */,
+				E89AF3A929977F1E00508DC2 /* Factory.swift in Sources */,
 				E89AF38B299774EB00508DC2 /* AppDelegate.swift in Sources */,
 				E89AF3A1299777C800508DC2 /* ModuleBuilder.swift in Sources */,
 				E89AF38D299774EB00508DC2 /* SceneDelegate.swift in Sources */,
+				E89AF3AB29977FF900508DC2 /* MainTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
