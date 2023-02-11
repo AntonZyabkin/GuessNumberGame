@@ -61,12 +61,11 @@ extension ModuleBuilder: Builder {
         return viewController
     }
     func buildResultViewController() -> ResultViewController {
-        let presenter = PlayerViewPrecenter(moduleBuilder: self)
+        let presenter = ResultViewPresenter(moduleBuilder: self)
         let viewController = ResultViewController()
-//        viewController.factory = factory
-//        presenter.view = viewController
-//        presenter.startGame()
-//        viewController.presenter = presenter
+        viewController.factory = factory
+        presenter.view = viewController
+        viewController.presenter = presenter
         return viewController
     }
 

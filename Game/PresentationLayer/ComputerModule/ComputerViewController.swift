@@ -36,7 +36,6 @@ class ComputerViewController: UIViewController {
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [moreButton, equelbutton, lessButton])
         stackView.axis = .horizontal
-        stackView.backgroundColor = .red
         stackView.spacing = 10
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
@@ -75,7 +74,7 @@ class ComputerViewController: UIViewController {
             
             hStackView.heightAnchor.constraint(equalToConstant: 90),
             hStackView.widthAnchor.constraint(equalToConstant: 300),
-            hStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            hStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -70),
             hStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
         guessLabel.translatesAutoresizingMaskIntoConstraints = false

@@ -14,17 +14,14 @@ final class PlayerViewController: GuessNumberViewController {
     
     lazy var guessLabel: UILabel = {
         let label = UILabel()
-        label.text = "skjdbvkjsbdjkvs"
-        label.backgroundColor = .red
+        label.text = "You are guessing"
         label.numberOfLines = 0
         label.textAlignment = .center
         return label
     }()
     lazy var answerLabel: UILabel = {
         let label = UILabel()
-        label.text = "skjdbvkjsbdjkvs"
-        label.backgroundColor = .red
-
+        label.text = ""
         label.numberOfLines = 1
         label.textAlignment = .center
         return label
@@ -48,17 +45,17 @@ final class PlayerViewController: GuessNumberViewController {
 
             textField.heightAnchor.constraint(equalToConstant: 50),
             textField.widthAnchor.constraint(equalToConstant: 300),
-            textField.topAnchor.constraint(lessThanOrEqualTo: guessLabel.bottomAnchor, constant: 10),
+            textField.topAnchor.constraint(lessThanOrEqualTo: guessLabel.bottomAnchor, constant: 30),
             textField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
             button.heightAnchor.constraint(equalToConstant: 50),
             button.widthAnchor.constraint(equalToConstant: 300),
-            button.topAnchor.constraint(lessThanOrEqualTo: textField.bottomAnchor, constant: 10),
+            button.topAnchor.constraint(lessThanOrEqualTo: textField.bottomAnchor, constant: 30),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             answerLabel.heightAnchor.constraint(equalToConstant: 50),
             answerLabel.widthAnchor.constraint(equalToConstant: 300),
-            answerLabel.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 10),
+            answerLabel.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 30),
             answerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
         guessLabel.translatesAutoresizingMaskIntoConstraints = false

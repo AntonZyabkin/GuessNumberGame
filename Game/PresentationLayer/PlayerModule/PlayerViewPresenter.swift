@@ -50,6 +50,7 @@ extension PlayerViewPrecenter: PlayerViewPrecenterProtocol {
     func buttonDidPressed() {
         guard let number = Int(view?.textField.text ?? "") else { return }
         moduleBuilder.game.playerMove(number: number)
+        view?.answerLabel.text = ""
         view?.guessLabel.text = "Attempt № \(moduleBuilder.game.playerAttempts) \nYou are guessing?"
         switch moduleBuilder.game.status {
         case .equal:
@@ -58,9 +59,13 @@ extension PlayerViewPrecenter: PlayerViewPrecenterProtocol {
                 self.goToResultViewController()
             }
         case .less:
-            view?.answerLabel.text = "No, my number is less than yours"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.view?.answerLabel.text = "No, my number is less than yours"
+            }
         case .more:
-            view?.answerLabel.text = "No, my number is more than yours"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.view?.answerLabel.text = "No, my number is more than yours"
+            }
         }
     }
 }

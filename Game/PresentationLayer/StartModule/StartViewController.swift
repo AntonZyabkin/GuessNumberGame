@@ -43,7 +43,7 @@ class StartViewController: UIViewController {
         NSLayoutConstraint.activate([
             button.heightAnchor.constraint(equalToConstant: 50),
             button.widthAnchor.constraint(equalToConstant: 300),
-            button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -70),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
             gameNameLabel.heightAnchor.constraint(equalToConstant: 50),

@@ -66,6 +66,8 @@ extension GameController: GameControllerProtocol {
     }
     func aiGuessNumber() {
         guessNumber = Int.random(in: 1...100)
+        leftEnd = 0
+        rightEnd = 100
     }
 }
 
