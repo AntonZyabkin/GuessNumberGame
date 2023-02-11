@@ -5,16 +5,19 @@
 //  Created by Anton Zyabkin on 11.02.2023.
 //
 
-import Foundation
 protocol Builder {
     func buildStartViewController() -> StartViewController
     func buildGuessNumberViewController() -> GuessNumberViewController
+    func buildComputerViewController() -> ComputerViewController
+    var game: GameControllerProtocol { get set }
 }
 
 final class ModuleBuilder {
     var factory: Factory
-    init(factory: Factory) {
+    var game: GameControllerProtocol
+    init(factory: Factory, game: GameControllerProtocol) {
         self.factory = factory
+        self.game = game
     }
 }
 
@@ -37,4 +40,13 @@ extension ModuleBuilder: Builder {
         viewController.factory = factory
         return viewController
     }
+    
+    func buildComputerViewController() -> ComputerViewController {
+        let presenter = ComputerViewPresenter(moduleBuilder: self)
+        let viewController = ComputerViewController()
+        presenter.view = viewController
+        viewController.presenter = presenter
+        return viewController
+    }
+
 }

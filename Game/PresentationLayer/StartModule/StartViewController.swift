@@ -7,10 +7,9 @@
 
 import UIKit
 
-protocol StartViewControllerProtocol {}
+protocol StartViewControllerProtocol: UIViewController {}
 
 class StartViewController: UIViewController {
-    var builder: Builder?
     var factory: FactoryProtocol!
     var presenter: StartViewPresenterProtocol?
     
@@ -18,7 +17,7 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
+        view.backgroundColor = .white
         button.addTarget(self, action: #selector(buttonDidPress), for: .touchUpInside)
     }
     
@@ -28,11 +27,8 @@ class StartViewController: UIViewController {
     }
     
     @objc func buttonDidPress() {
-        let guessViewController = presenter?.startGameButtonDidPressed() ?? UIViewController()
-        guessViewController.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(guessViewController, animated: false)
+        presenter?.buttonDidPress()
     }
-    
     
     private func configViews() {
         view.addSubview(button)

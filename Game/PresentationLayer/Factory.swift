@@ -11,7 +11,7 @@ import UIKit
 
 protocol FactoryProtocol {
     func createBlueButton(withTitle: String) -> UIButton
-    func createTextView(withPlaceholder: String) -> UITextField
+    func createTextField(withPlaceholder: String) -> UITextField
 }
 
 final class Factory: FactoryProtocol {
@@ -23,9 +23,11 @@ final class Factory: FactoryProtocol {
         return button
     }
     
-    func createTextView(withPlaceholder: String) -> UITextField {
+    func createTextField(withPlaceholder: String) -> UITextField {
         let textfield = MainTextField(placeholderText: withPlaceholder)
         textfield.layer.cornerRadius = 15
+        textfield.textAlignment = .center
+        textfield.layer.borderColor = UIColor.systemGray.cgColor
         return textfield
     }
     

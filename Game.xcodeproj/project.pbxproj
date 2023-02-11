@@ -18,6 +18,9 @@
 		E89AF3AB29977FF900508DC2 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3AA29977FF900508DC2 /* MainTextField.swift */; };
 		E89AF3B129978E1A00508DC2 /* GuessNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3B029978E1A00508DC2 /* GuessNumberViewController.swift */; };
 		E89AF3B429978E3000508DC2 /* GuessNumberViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3B329978E3000508DC2 /* GuessNumberViewPresenter.swift */; };
+		E89AF3B72997A8EF00508DC2 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3B62997A8EF00508DC2 /* GameController.swift */; };
+		E89AF3BA2997AB8C00508DC2 /* ComputerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3B92997AB8C00508DC2 /* ComputerViewController.swift */; };
+		E89AF3BC2997AB9C00508DC2 /* ComputerViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3BB2997AB9C00508DC2 /* ComputerViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		E89AF3AA29977FF900508DC2 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
 		E89AF3B029978E1A00508DC2 /* GuessNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessNumberViewController.swift; sourceTree = "<group>"; };
 		E89AF3B329978E3000508DC2 /* GuessNumberViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessNumberViewPresenter.swift; sourceTree = "<group>"; };
+		E89AF3B62997A8EF00508DC2 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		E89AF3B92997AB8C00508DC2 /* ComputerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerViewController.swift; sourceTree = "<group>"; };
+		E89AF3BB2997AB9C00508DC2 /* ComputerViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				E89AF3A32997795400508DC2 /* Application */,
+				E89AF3B52997A8C800508DC2 /* GameModule */,
 				E89AF3A429977B4F00508DC2 /* PresentationLayer */,
 			);
 			path = Game;
@@ -92,6 +99,7 @@
 				E89AF3AC29977FFF00508DC2 /* CustomViews */,
 				E89AF3A529977C8C00508DC2 /* StartModule */,
 				E89AF3AF29978DC200508DC2 /* GuessNumberModule */,
+				E89AF3B82997AB5200508DC2 /* ComputerModule */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -120,6 +128,23 @@
 				E89AF3B329978E3000508DC2 /* GuessNumberViewPresenter.swift */,
 			);
 			path = GuessNumberModule;
+			sourceTree = "<group>";
+		};
+		E89AF3B52997A8C800508DC2 /* GameModule */ = {
+			isa = PBXGroup;
+			children = (
+				E89AF3B62997A8EF00508DC2 /* GameController.swift */,
+			);
+			path = GameModule;
+			sourceTree = "<group>";
+		};
+		E89AF3B82997AB5200508DC2 /* ComputerModule */ = {
+			isa = PBXGroup;
+			children = (
+				E89AF3B92997AB8C00508DC2 /* ComputerViewController.swift */,
+				E89AF3BB2997AB9C00508DC2 /* ComputerViewPresenter.swift */,
+			);
+			path = ComputerModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,11 +217,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E89AF3BC2997AB9C00508DC2 /* ComputerViewPresenter.swift in Sources */,
 				E89AF3A729977CBC00508DC2 /* StartViewPresenter.swift in Sources */,
+				E89AF3B72997A8EF00508DC2 /* GameController.swift in Sources */,
 				E89AF3B129978E1A00508DC2 /* GuessNumberViewController.swift in Sources */,
 				E89AF3B429978E3000508DC2 /* GuessNumberViewPresenter.swift in Sources */,
 				E89AF38F299774EB00508DC2 /* StartViewController.swift in Sources */,
 				E89AF3A929977F1E00508DC2 /* Factory.swift in Sources */,
+				E89AF3BA2997AB8C00508DC2 /* ComputerViewController.swift in Sources */,
 				E89AF38B299774EB00508DC2 /* AppDelegate.swift in Sources */,
 				E89AF3A1299777C800508DC2 /* ModuleBuilder.swift in Sources */,
 				E89AF38D299774EB00508DC2 /* SceneDelegate.swift in Sources */,

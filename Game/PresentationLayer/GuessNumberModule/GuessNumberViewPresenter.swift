@@ -6,21 +6,48 @@
 //
 
 import Foundation
+import UIKit
 
 protocol GuessNumberViewPresenterProtocol {
-    
+    func editingChanged (text: String?) -> Void
+    func buttonDidPress()
 }
 
 final class GuessNumberViewPresenter {
-    private let moduleBuilder: Builder
+    private var moduleBuilder: Builder
 
-    var view: GuessNumberViewControllerProtocol?
+    weak var view: GuessNumberViewControllerProtocol?
     init(moduleBuilder: Builder) {
         self.moduleBuilder = moduleBuilder
+    }
+    private func disableButton() {
+        view?.button.alpha = 0.5
+        view?.button.isEnabled = false
     }
 
 }
 
 extension GuessNumberViewPresenter: GuessNumberViewPresenterProtocol {
     
+    func editingChanged(text: String?) {
+        guard let number = Int(text ?? "") else {
+            disableButton()
+            return
+        }
+        if number > 0 && number <= 100 {
+            print(number)
+            moduleBuilder.game.guessNumber = number
+            view?.button.alpha = 1
+            view?.button.backgroundColor = .systemBlue
+            view?.button.isEnabled = true
+        } else {
+            disableButton()
+        }
+    }
+    func buttonDidPress() {
+        let computerViewController = moduleBuilder.buildComputerViewController()
+        computerViewController.modalPresentationStyle = .fullScreen
+        view?.navigationController?.pushViewController(computerViewController, animated: true)
+    }
+
 }
