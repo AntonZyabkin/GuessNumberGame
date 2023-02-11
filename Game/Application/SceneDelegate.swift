@@ -20,8 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func setupRootViewController(windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
-        let moduleBuilder = ModuleBuilder()
-        window.rootViewController = moduleBuilder.buildStartViewController()
+        let factory = Factory()
+        let moduleBuilder = ModuleBuilder(factory: factory)
+        let navigationController = UINavigationController(rootViewController: moduleBuilder.buildStartViewController())
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
     }

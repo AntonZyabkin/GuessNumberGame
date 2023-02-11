@@ -16,6 +16,8 @@
 		E89AF3A729977CBC00508DC2 /* StartViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3A629977CBC00508DC2 /* StartViewPresenter.swift */; };
 		E89AF3A929977F1E00508DC2 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3A829977F1E00508DC2 /* Factory.swift */; };
 		E89AF3AB29977FF900508DC2 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3AA29977FF900508DC2 /* MainTextField.swift */; };
+		E89AF3B129978E1A00508DC2 /* GuessNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3B029978E1A00508DC2 /* GuessNumberViewController.swift */; };
+		E89AF3B429978E3000508DC2 /* GuessNumberViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AF3B329978E3000508DC2 /* GuessNumberViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E89AF3A629977CBC00508DC2 /* StartViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewPresenter.swift; sourceTree = "<group>"; };
 		E89AF3A829977F1E00508DC2 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		E89AF3AA29977FF900508DC2 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
+		E89AF3B029978E1A00508DC2 /* GuessNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessNumberViewController.swift; sourceTree = "<group>"; };
+		E89AF3B329978E3000508DC2 /* GuessNumberViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessNumberViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +87,11 @@
 		E89AF3A429977B4F00508DC2 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				E89AF3AC29977FFF00508DC2 /* CustomViews */,
-				E89AF3A529977C8C00508DC2 /* StartModule */,
 				E89AF3A0299777C800508DC2 /* ModuleBuilder.swift */,
 				E89AF3A829977F1E00508DC2 /* Factory.swift */,
+				E89AF3AC29977FFF00508DC2 /* CustomViews */,
+				E89AF3A529977C8C00508DC2 /* StartModule */,
+				E89AF3AF29978DC200508DC2 /* GuessNumberModule */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -106,6 +111,15 @@
 				E89AF3AA29977FF900508DC2 /* MainTextField.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		E89AF3AF29978DC200508DC2 /* GuessNumberModule */ = {
+			isa = PBXGroup;
+			children = (
+				E89AF3B029978E1A00508DC2 /* GuessNumberViewController.swift */,
+				E89AF3B329978E3000508DC2 /* GuessNumberViewPresenter.swift */,
+			);
+			path = GuessNumberModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E89AF3A729977CBC00508DC2 /* StartViewPresenter.swift in Sources */,
+				E89AF3B129978E1A00508DC2 /* GuessNumberViewController.swift in Sources */,
+				E89AF3B429978E3000508DC2 /* GuessNumberViewPresenter.swift in Sources */,
 				E89AF38F299774EB00508DC2 /* StartViewController.swift in Sources */,
 				E89AF3A929977F1E00508DC2 /* Factory.swift in Sources */,
 				E89AF38B299774EB00508DC2 /* AppDelegate.swift in Sources */,
