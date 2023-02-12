@@ -15,7 +15,6 @@ protocol GuessNumberViewPresenterProtocol {
 
 final class GuessNumberViewPresenter {
     private var moduleBuilder: Builder
-
     weak var view: GuessNumberViewControllerProtocol?
     init(moduleBuilder: Builder) {
         self.moduleBuilder = moduleBuilder
@@ -24,11 +23,9 @@ final class GuessNumberViewPresenter {
         view?.button.alpha = 0.5
         view?.button.isEnabled = false
     }
-
 }
 
 extension GuessNumberViewPresenter: GuessNumberViewPresenterProtocol {
-    
     func editingChanged(text: String?) {
         guard let number = Int(text ?? "") else {
             disableButton()
@@ -48,5 +45,4 @@ extension GuessNumberViewPresenter: GuessNumberViewPresenterProtocol {
         computerViewController.modalPresentationStyle = .fullScreen
         view?.navigationController?.pushViewController(computerViewController, animated: false)
     }
-
 }

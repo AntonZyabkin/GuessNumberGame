@@ -14,7 +14,7 @@ protocol ResultViewControllerProtocol: UIViewController {
 class ResultViewController: UIViewController {
     var factory: FactoryProtocol!
     var presenter: ResultViewPresenterProtocol?
-
+    
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Scores:"
@@ -37,7 +37,7 @@ class ResultViewController: UIViewController {
         return label
     }()
     private lazy var stackView: UIStackView = {
-       let stack = UIStackView(arrangedSubviews: [titleLabel, scoreLabel, winnerLabel])
+        let stack = UIStackView(arrangedSubviews: [titleLabel, scoreLabel, winnerLabel])
         stack.axis = .vertical
         stack.alignment = .fill
         stack.distribution = .equalSpacing
@@ -45,7 +45,7 @@ class ResultViewController: UIViewController {
         return stack
     }()
     lazy var mainMenuButton = factory.createBlueButton(withTitle: "Main menu")
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
@@ -70,7 +70,7 @@ class ResultViewController: UIViewController {
             mainMenuButton.widthAnchor.constraint(equalToConstant: 300),
             mainMenuButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -70),
             mainMenuButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-
+            
         ])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         mainMenuButton.translatesAutoresizingMaskIntoConstraints = false

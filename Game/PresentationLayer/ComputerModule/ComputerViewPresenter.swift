@@ -19,7 +19,6 @@ final class ComputerViewPresenter {
     init(moduleBuilder: Builder) {
         self.moduleBuilder = moduleBuilder
     }
-    
     private func refreshButtons() {
         view?.lessButton.isEnabled = false
         view?.moreButton.isEnabled = false
@@ -47,7 +46,6 @@ extension ComputerViewPresenter: ComputerViewPresenterProtocol {
             view?.moreButton.isEnabled = true
         }
     }
-    
     func equelButtonDidPressed() {
         let playerViewController = moduleBuilder.buildPlayerViewController()
         playerViewController.modalPresentationStyle = .fullScreen

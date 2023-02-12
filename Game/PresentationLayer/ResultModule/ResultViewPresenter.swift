@@ -14,11 +14,12 @@ protocol ResultViewPresenterProtocol {
 final class ResultViewPresenter {
     private var moduleBuilder: Builder
     weak var view: ResultViewControllerProtocol?
-
+    
     init(moduleBuilder: Builder) {
         self.moduleBuilder = moduleBuilder
     }
 }
+
 extension ResultViewPresenter: ResultViewPresenterProtocol{
     func showResult() {
         view?.scoreLabel.text = "Your's tries count: \(moduleBuilder.game.playerAttempts)\nComputers's tries count: \(moduleBuilder.game.aiAttempts)"
@@ -33,7 +34,6 @@ extension ResultViewPresenter: ResultViewPresenterProtocol{
             break
         }
     }
-    
     func mainMenuButtonDidPressed() {
         moduleBuilder.game = GameController()
         view?.navigationController?.popToRootViewController(animated: true)

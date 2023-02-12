@@ -39,7 +39,7 @@ final class GameController {
             leftEnd = assumptionNumber
         }
     }
-
+    
     private func checkNumber(_ number: Int) -> MoveResult {
         switch number {
         case guessNumber:

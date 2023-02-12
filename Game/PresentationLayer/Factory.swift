@@ -23,7 +23,6 @@ final class Factory: FactoryProtocol {
         button.layer.cornerRadius = 15
         return button
     }
-    
     func createSquareButton(withTitle: String) -> UIButton {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         button.setTitle(withTitle, for: .normal)
@@ -34,15 +33,14 @@ final class Factory: FactoryProtocol {
         button.layer.cornerRadius = 15
         return button
     }
-    
     func createTextField(withPlaceholder: String) -> UITextField {
         let textfield = UITextField()
         textfield.placeholder = withPlaceholder
+        textfield.keyboardType = .numberPad
         textfield.layer.cornerRadius = 15
         textfield.textAlignment = .center
         textfield.layer.borderWidth = 1
         textfield.layer.borderColor = UIColor.systemGray4.cgColor
         return textfield
     }
-    
 }

@@ -11,7 +11,6 @@ protocol PlayerViewControllerProtocol: UIViewController {
     
 }
 final class PlayerViewController: GuessNumberViewController {
-    
     lazy var guessLabel: UILabel = {
         let label = UILabel()
         label.text = "You are guessing"
@@ -26,11 +25,10 @@ final class PlayerViewController: GuessNumberViewController {
         label.textAlignment = .center
         return label
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     override func configViews() {
         view.addSubview(button)
         view.addSubview(guessLabel)
@@ -42,12 +40,12 @@ final class PlayerViewController: GuessNumberViewController {
             guessLabel.widthAnchor.constraint(equalToConstant: 300),
             guessLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
             guessLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-
+            
             textField.heightAnchor.constraint(equalToConstant: 50),
             textField.widthAnchor.constraint(equalToConstant: 300),
             textField.topAnchor.constraint(lessThanOrEqualTo: guessLabel.bottomAnchor, constant: 30),
             textField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-
+            
             button.heightAnchor.constraint(equalToConstant: 50),
             button.widthAnchor.constraint(equalToConstant: 300),
             button.topAnchor.constraint(lessThanOrEqualTo: textField.bottomAnchor, constant: 30),
@@ -65,6 +63,4 @@ final class PlayerViewController: GuessNumberViewController {
     }
 }
 
-extension PlayerViewController: PlayerViewControllerProtocol {
-    
-}
+extension PlayerViewController: PlayerViewControllerProtocol {}

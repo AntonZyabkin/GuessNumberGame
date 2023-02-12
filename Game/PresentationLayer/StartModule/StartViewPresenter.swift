@@ -15,7 +15,7 @@ protocol StartViewPresenterProtocol {
 }
 final class StartViewPresenter {
     private let moduleBuilder: Builder
-
+    
     weak var view: StartViewControllerProtocol?
     init(moduleBuilder: Builder) {
         self.moduleBuilder = moduleBuilder
@@ -31,15 +31,4 @@ extension StartViewPresenter: StartViewPresenterProtocol {
         guessViewController.modalPresentationStyle = .fullScreen
         view?.navigationController?.pushViewController(guessViewController, animated: true)
     }
-//    func buttonDidPressed() {
-//        let playerViewController = moduleBuilder.buildPlayerViewController()
-//        playerViewController.modalPresentationStyle = .fullScreen
-//        view?.navigationController?.pushViewController(playerViewController, animated: false)
-//    }
-//    func buttonDidPressed() {
-//        let playerViewController = moduleBuilder.buildResultViewController()
-//        playerViewController.modalPresentationStyle = .fullScreen
-//        view?.navigationController?.pushViewController(playerViewController, animated: false)
-//    }
-
 }

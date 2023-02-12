@@ -24,7 +24,6 @@ final class ModuleBuilder {
 }
 
 extension ModuleBuilder: Builder {
-    
     func buildStartViewController() -> StartViewController {
         let presenter = StartViewPresenter(moduleBuilder: self)
         let viewController = StartViewController()
@@ -33,7 +32,6 @@ extension ModuleBuilder: Builder {
         viewController.presenter = presenter
         return viewController
     }
-    
     func buildGuessNumberViewController() -> GuessNumberViewController {
         let presenter = GuessNumberViewPresenter(moduleBuilder: self)
         let viewController = GuessNumberViewController()
@@ -42,7 +40,6 @@ extension ModuleBuilder: Builder {
         viewController.factory = factory
         return viewController
     }
-    
     func buildComputerViewController() -> ComputerViewController {
         let presenter = ComputerViewPresenter(moduleBuilder: self)
         let viewController = ComputerViewController()
@@ -68,5 +65,5 @@ extension ModuleBuilder: Builder {
         viewController.presenter = presenter
         return viewController
     }
-
+    
 }

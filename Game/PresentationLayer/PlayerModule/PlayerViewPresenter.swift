@@ -13,7 +13,7 @@ protocol PlayerViewPrecenterProtocol: GuessNumberViewPresenterProtocol{
 final class PlayerViewPrecenter {
     private var moduleBuilder: Builder
     weak var view: PlayerViewController?
-
+    
     init(moduleBuilder: Builder) {
         self.moduleBuilder = moduleBuilder
     }
@@ -46,12 +46,13 @@ extension PlayerViewPrecenter: PlayerViewPrecenterProtocol {
             disableButton()
         }
     }
-
+    
     func buttonDidPressed() {
         guard let number = Int(view?.textField.text ?? "") else { return }
         moduleBuilder.game.playerMove(number: number)
         view?.answerLabel.text = ""
         view?.guessLabel.text = "Attempt № \(moduleBuilder.game.playerAttempts) \nYou are guessing?"
+        view?.textField.text = ""
         switch moduleBuilder.game.status {
         case .equal:
             view?.answerLabel.text = "Yes! You guessed it!"

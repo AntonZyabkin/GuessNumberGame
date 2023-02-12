@@ -21,22 +21,18 @@ class StartViewController: UIViewController {
         label.textAlignment = .center
         return label
     }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         button.addTarget(self, action: #selector(buttonDidPressed), for: .touchUpInside)
     }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         configViews()
     }
-    
     @objc func buttonDidPressed() {
         presenter?.buttonDidPressed()
     }
-    
     private func configViews() {
         view.addSubview(button)
         view.addSubview(gameNameLabel)
@@ -45,7 +41,7 @@ class StartViewController: UIViewController {
             button.widthAnchor.constraint(equalToConstant: 300),
             button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -70),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-
+            
             gameNameLabel.heightAnchor.constraint(equalToConstant: 50),
             gameNameLabel.widthAnchor.constraint(equalToConstant: 300),
             gameNameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
@@ -56,6 +52,4 @@ class StartViewController: UIViewController {
     }
 }
 
-extension StartViewController: StartViewControllerProtocol {
-    
-}
+extension StartViewController: StartViewControllerProtocol {}
